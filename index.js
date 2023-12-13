@@ -1,7 +1,9 @@
 import Koa from "koa";
 import router from "./router/index.js";
 import koaStatic from "koa-static";
+import prisma from './db/prisma.js'
 const app = new Koa();
+app.context.prisma = prisma
 // 请求体
 import {koaBody} from 'koa-body'
 app.use(koaBody({}))
