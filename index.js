@@ -2,6 +2,9 @@ import Koa from "koa";
 import router from "./router/index.js";
 import koaStatic from "koa-static";
 const app = new Koa();
+// 请求体
+import {koaBody} from 'koa-body'
+app.use(koaBody({}))
 // 静态资源配置
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
