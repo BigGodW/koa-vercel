@@ -2,7 +2,7 @@ import Router from 'koa-router'
 
 const router = new Router()
 router.get('/',ctx=>{
-    ctx.body = 'hello koa-body'
+    ctx.body = 'hello app.js'
 })
 router.get('/user',ctx=>{
     ctx.body = 'user'
