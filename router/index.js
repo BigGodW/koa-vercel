@@ -2,7 +2,7 @@ import Router from 'koa-router'
 
 const router = new Router()
 router.get('/',ctx=>{
-    ctx.body = 'hello app.js'
+    ctx.body = 'prisma-'
 })
 router.get('/user',async ctx=>{
     ctx.body = await ctx.prisma.user.findMany()
