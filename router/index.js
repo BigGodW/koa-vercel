@@ -9,14 +9,19 @@ router.get('/user',async ctx=>{
     
 })
 router.post('/user',async ctx=>{
-    const {name,email} = ctx.request.body
     const res = await ctx.prisma.user.create({
         data: {
-          name,
-          email
+          name: 'Alice',
+          email: 'alice@prisma.io',
+          posts: {
+            create: { title: 'Hello World' },
+          },
+          profile: {
+            create: { bio: 'I like turtles' },
+          },
         },
       })
-      console.log(res)
+    
     ctx.body = {message:'添加用户成功',res}
 
 })
