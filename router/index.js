@@ -2,7 +2,7 @@ import Router from 'koa-router'
 
 const router = new Router()
 router.get('/',ctx=>{
-    ctx.body = 'prisma-'
+    ctx.body = 'vercel-builds'
 })
 router.get('/user',async ctx=>{
     ctx.body = await ctx.prisma.user.findMany()
