@@ -3,7 +3,7 @@ import user from './user.js'
 const router = new Router()
 router.use('/user',user.routes(),user.allowedMethods())
 router.get('/',ctx=>{
-    ctx.body = 'vercel-builds'
+    ctx.body = 'app-builds, 修改verce.json配置 入口文件'
 })
 
 router.post('/',ctx=>{
